@@ -67,7 +67,7 @@ st.sidebar.image(img_banner)
 
 
 with st.sidebar:
-    i_page = st.selectbox('Veggies Detector', ['Home', 'Detector'], index=0)
+    i_page = st.selectbox('Vegetable Detection Using Images', ['Detector'], index=0)
     st.markdown("##### Developed by: Adam Hilman")
 
 
@@ -79,8 +79,10 @@ data_augmentation = ImageDataGenerator(rescale=1/255.,
                                       width_shift_range=.2,
                                       height_shift_range=.2,
                                       horizontal_flip=True)
+    
 
-if i_page == 'Home':
+
+if i_page== 'Detector':
     st.markdown("## Introduction")
     st.write(''' 
              The objective of this app is to perform real time detection of vegetables.
@@ -89,13 +91,11 @@ if i_page == 'Home':
             
              ''')
     st.markdown("---")        
-
-
-elif i_page== 'Detector':
     # load model
     #loaded_model= load_model(filename)
     # Load the model
     #loaded_model = tf.keras.models.load_model('resnetfinal.h5', custom_objects={'KerasLayer': KerasLayer})
+    
     
     tab1, tab2= st.tabs(['Upload Image', 'Open Camera'])
     with tab1:

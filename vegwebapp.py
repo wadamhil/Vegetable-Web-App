@@ -61,7 +61,7 @@ CLASS_NAMES= ['Bean',
  'Tomato']
 
 
-img_banner = Image.open('icons/banner.JPG')
+img_banner = Image.open('icons/banner.jpg')
 
 st.sidebar.image(img_banner)
 

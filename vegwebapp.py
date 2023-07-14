@@ -70,7 +70,6 @@ with st.sidebar:
     i_page = st.selectbox('Veggies Detector', ['Home', 'Detector'], index=0)
     st.markdown("##### Developed by: Adam Hilman")
 
-st.sidebar.markdown("##### Developed by: Adam Hilman")
 
 # Define the data augmentation parameters
 data_augmentation = ImageDataGenerator(rescale=1/255.,

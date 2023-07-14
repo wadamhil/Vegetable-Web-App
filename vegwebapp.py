@@ -16,9 +16,9 @@ import tensorflow_hub as hub
 
 
 
-img_favicon = Image.open('icons/vegetable.png')
+favicon = Image.open('icons/vegetable.png')
 
-st.set_page_config(layout='wide',page_title="Veggies Detector", page_icon = img_favicon)
+st.set_page_config(layout='wide',page_title="Vegetable Detector", page_icon = favicon)
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 #st.beta_set_page_config(page_title='your_title', page_icon = favicon, layout = 'wide', initial_sidebar_state = 'auto')
@@ -44,26 +44,14 @@ with tf.keras.utils.custom_object_scope({'KerasLayer': KerasLayer}):
 
 
 IMAGE_SIZE=224
-filename= 'resnetfinal.h5'
-
-CLASS_NAMES= ['Bean',
- 'Bitter_Gourd',
- 'Bottle_Gourd',
- 'Brinjal',
- 'Broccoli',
- 'Cabbage',
- 'Capsicum',
- 'Carrot',
- 'Cauliflower',
- 'Cucumber',
- 'Potato',
- 'Radish',
- 'Tomato']
 
 
-img_banner = Image.open('icons/banner.jpg')
+CLASS_NAMES= ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal', 'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower', 'Cucumber', 'Potato', 'Radish', 'Tomato']
 
-st.sidebar.image(img_banner)
+
+sideimg = Image.open('icons/banner.jpg')
+
+st.sidebar.image(sideimg)
 
 
 with st.sidebar:

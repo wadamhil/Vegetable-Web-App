@@ -65,9 +65,10 @@ img_banner = Image.open('icons/banner.jpg')
 
 st.sidebar.image(img_banner)
 
+
 with st.sidebar:
-    i_page= option_menu('Veggies Detector', ['Home',  'Detector'],
-                        default_index=0, icons=['house', 'search' ], menu_icon= 'cast')
+    i_page = st.selectbox('Veggies Detector', ['Home', 'Detector'], index=0)
+    st.markdown("##### Developed by: Adam Hilman")
 
 st.sidebar.markdown("##### Developed by: Adam Hilman")
 
